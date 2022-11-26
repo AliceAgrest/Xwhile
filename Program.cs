@@ -83,6 +83,24 @@ namespace MyApp
             else
                 Console.WriteLine("You are so smart af you are a mf ,your grade is  " + highGrade);
             
+            //answer6
+            int num, num1, numCount = 0, duplicNum = 1, sumNum = 0;
+            Console.WriteLine("Enter a positive number ");
+            num = int.Parse(Console.ReadLine());
+            while (num > 0)
+            {
+                if (num % 10 >= 0)
+                {
+                    numCount++;
+                    num1 = num % 10;
+                    duplicNum = num1*duplicNum;
+                    sumNum += num1;
+                    num /= 10;
+                }
+            }
+            Console.WriteLine($"The count of your numbers is {numCount}\n" +
+                    $"The sum of your numbers is {sumNum}\n" +
+                    $"The duplicating of your numbers is {duplicNum}");
 
             Console.ReadLine();
         }
